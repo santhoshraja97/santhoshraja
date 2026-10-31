@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Consult — Santhosh Raja, SRE</title>
+<meta name="description" content="Ask Santhosh Raja about any Site Reliability Engineering scenario: incidents, observability, SLOs, AIOps, cloud reliability." />
+
+<meta name="theme-color" content="#050505" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23050505'/><circle cx='16' cy='16' r='6' fill='%23d4af37'/></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/site.css" />
+
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="glow"></div>
+<nav id="nav">
+  <div class="wrap">
+    <a href="index.html#top" class="brand"><span class="pulse"></span><b>santhosh.raja</b> / sre</a>
+    <div class="navlinks">
+      <a href="index.html#about"><span>01</span> about</a>
+      <a href="index.html#experience"><span>02</span> experience</a>
+      <a href="index.html#stack"><span>03</span> stack</a>
+      <a href="blog.html"><span>04</span> blog</a>
+      <a href="index.html#contact"><span>05</span> contact</a>
+      <a href="consult.html" class="nav-cta active">Consult ✦</a>
+    </div>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</nav>
+
+<header class="page-hero wrap">
+  <div class="eyebrow r">SRE Consulting</div>
+  <h1 class="r">Bring me your <em>scenario.</em></h1>
+  <p class="lede r">Alerts that cry wolf, an outage you can't explain, SLOs nobody trusts, or a plan to put AI into your operations. Describe the situation, and I'll personally read it and reply by email.</p>
+  <div class="cta r"><a class="btn primary" href="#ask">Describe your scenario ↓</a><a class="btn" href="blog.html">Read field notes</a></div>
+</header>
+
+<section style="padding-top:60px">
+  <div class="wrap">
+    <div class="eyebrow r">What I can help with</div>
+    <h2 class="r">Eight rooms of the <em>reliability house.</em></h2>
+    <div class="stack-grid"><div class="card r"><span class="ic">[ incident ]</span><h3>Incidents & on-call</h3><p class="muted" style="font-size:15px">Severity models, escalation paths, war-room hygiene, PagerDuty / ServiceNow flows.</p></div>
+<div class="card r"><span class="ic">[ observability ]</span><h3>Observability & alerting</h3><p class="muted" style="font-size:15px">Dashboards that answer questions, alert noise reduction, Splunk / New Relic / CloudWatch / Grafana.</p></div>
+<div class="card r"><span class="ic">[ slo ]</span><h3>SLOs & error budgets</h3><p class="muted" style="font-size:15px">Choosing SLIs, setting realistic targets, burn-rate alerts, getting product teams on board.</p></div>
+<div class="card r"><span class="ic">[ aiops ]</span><h3>AI in SRE / AIOps</h3><p class="muted" style="font-size:15px">Anomaly detection, AI-assisted triage, private GPT for runbooks and automation.</p></div>
+<div class="card r"><span class="ic">[ cloud ]</span><h3>Cloud reliability</h3><p class="muted" style="font-size:15px">AWS (EKS, Lambda) and Azure architecture reviews, multi-region and failover thinking.</p></div>
+<div class="card r"><span class="ic">[ postmortem ]</span><h3>Postmortems & culture</h3><p class="muted" style="font-size:15px">Blameless reviews, action items that actually close, building an SRE practice.</p></div>
+<div class="card r"><span class="ic">[ cicd ]</span><h3>CI/CD & release safety</h3><p class="muted" style="font-size:15px">Azure DevOps pipelines, progressive delivery, safe rollbacks, mobile releases.</p></div>
+<div class="card r"><span class="ic">[ toil ]</span><h3>Toil & automation</h3><p class="muted" style="font-size:15px">Finding the toil, sizing it, and automating it away without creating new risk.</p></div></div>
+
+    <div class="pillars">
+      <div class="pillar r"><span class="n">/01</span><h3>You describe it</h3><p>What's happening, where it runs, and what you've already tried. The more context, the sharper the answer.</p></div>
+      <div class="pillar r"><span class="n">/02</span><h3>I review it</h3><p>I read every request myself and think it through against real production experience in pharma, life science and banking.</p></div>
+      <div class="pillar r"><span class="n">/03</span><h3>We take it forward</h3><p>You get a written reply. If it needs more depth, we can set up a call.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="ask" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow r">Request</div>
+    <h2 class="r">Tell me <em>what's breaking.</em></h2>
+    <form id="consult-form" class="list-panel r" style="margin-top:48px;padding:40px" novalidate>
+      <div class="form-grid">
+        <div class="field"><label for="name">Your name <i>*</i></label><input id="name" name="name" required autocomplete="name" placeholder="Jane Doe"></div>
+        <div class="field"><label for="email">Email <i>*</i></label><input id="email" name="email" type="email" required autocomplete="email" placeholder="jane@company.com"></div>
+        <div class="field"><label for="company">Company &amp; role</label><input id="company" name="company" placeholder="Platform lead at Acme"></div>
+        <div class="field"><label for="env">Environment</label>
+          <select id="env" name="environment"><option>AWS</option><option>Azure</option><option>GCP</option><option>Hybrid / multi-cloud</option><option>On-prem / Kubernetes</option><option>Not sure</option></select></div>
+        <div class="field full"><label>Topic</label><div class="pills"><input type="radio" name="topic" id="t-incident" value="Incidents & on-call" checked><label for="t-incident">Incidents & on-call</label>
+<input type="radio" name="topic" id="t-observability" value="Observability & alerting"><label for="t-observability">Observability & alerting</label>
+<input type="radio" name="topic" id="t-slo" value="SLOs & error budgets"><label for="t-slo">SLOs & error budgets</label>
+<input type="radio" name="topic" id="t-aiops" value="AI in SRE / AIOps"><label for="t-aiops">AI in SRE / AIOps</label>
+<input type="radio" name="topic" id="t-cloud" value="Cloud reliability"><label for="t-cloud">Cloud reliability</label>
+<input type="radio" name="topic" id="t-postmortem" value="Postmortems & culture"><label for="t-postmortem">Postmortems & culture</label>
+<input type="radio" name="topic" id="t-cicd" value="CI/CD & release safety"><label for="t-cicd">CI/CD & release safety</label>
+<input type="radio" name="topic" id="t-toil" value="Toil & automation"><label for="t-toil">Toil & automation</label>
+<input type="radio" name="topic" id="t-other" value="Something else"><label for="t-other">Something else</label></div></div>
+        <div class="field full"><label>How urgent is it?</label><div class="pills"><input type="radio" name="urgency" id="u-curious" value="Just curious"><label for="u-curious">Just curious</label>
+<input type="radio" name="urgency" id="u-planning" value="Planning / design" checked><label for="u-planning">Planning / design</label>
+<input type="radio" name="urgency" id="u-pain" value="Recurring production pain"><label for="u-pain">Recurring production pain</label>
+<input type="radio" name="urgency" id="u-active" value="Active incident"><label for="u-active">Active incident</label></div></div>
+        <div class="field full"><label for="scenario">The scenario <i>*</i></label>
+          <textarea id="scenario" name="scenario" required placeholder="e.g. Our checkout service on EKS has p99 spikes every evening. CloudWatch shows CPU is fine, but PagerDuty fires 30+ alerts a night and the team is burning out…"></textarea>
+          <small>Please don't include passwords, keys, customer data or anything confidential.</small></div>
+        <div class="field full"><label for="tried">What have you tried so far?</label><textarea id="tried" name="tried_so_far" style="min-height:100px" placeholder="Optional, but it saves a round-trip."></textarea></div>
+        <div class="field full"><label>Preferred response</label><div class="pills">
+          <input type="radio" name="response" id="r-email" value="Email reply" checked><label for="r-email">Email reply</label>
+          <input type="radio" name="response" id="r-call" value="Short call"><label for="r-call">Short call</label></div></div>
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      </div>
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:30px">
+        <button class="btn primary" type="submit" id="send">Send scenario ✦</button>
+        <span class="muted" style="font-size:14px">or email <a id="mail-alt" style="color:var(--ok)" href="#"></a></span>
+      </div>
+      <div class="form-status" id="status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Santhosh Raja · <a href="index.html" style="color:var(--ok)">home</a> · <a href="blog.html" style="color:var(--ok)">blog</a> · <a href="consult.html" style="color:var(--ok)">consult</a></span>
+    <span><span data-visits style="color:var(--ok)">…</span> page loads · session uptime <span id="uptime" style="color:var(--ok)">0s</span></span>
+  </div>
+</footer>
+<script src="config.js"></script>
+<script src="assets/js/site.js"></script>
+<script>
+(() => {
+  const CFG = window.SITE_CONFIG, f = document.getElementById('consult-form'), st = document.getElementById('status'), btn = document.getElementById('send');
+  const alt = document.getElementById('mail-alt'); alt.textContent = CFG.contactEmail; alt.href = 'mailto:' + CFG.contactEmail;
+  const mailFallback = d => 'mailto:' + CFG.contactEmail + '?subject=' + encodeURIComponent('SRE consult: ' + d.topic) + '&body=' + encodeURIComponent(Object.entries(d).map(([k,v]) => k + ': ' + v).join('\n\n'));
+  f.addEventListener('submit', async e => {
+    e.preventDefault();
+    const d = Object.fromEntries(new FormData(f));
+    if (d._honey) return;
+    if (!d.name || !d.email || !/^\S+@\S+\.\S+$/.test(d.email) || (d.scenario||'').trim().length < 20) {
+      st.className = 'form-status err'; st.textContent = 'Please add your name, a valid email and a few lines about the scenario (20+ characters).'; return;
+    }
+    delete d._honey;
+    btn.disabled = true; btn.textContent = 'Sending…'; st.className = 'form-status'; st.textContent = '';
+    try {
+      const r = await fetch('https://formsubmit.co/ajax/' + encodeURIComponent(CFG.contactEmail), {
+        method: 'POST', headers: {'Content-Type':'application/json', 'Accept':'application/json'},
+        body: JSON.stringify({ ...d, _subject: `SRE consult [${d.urgency}] ${d.topic} — ${d.name}`, _replyto: d.email, _template: 'table', _captcha: 'false' })
+      });
+      const res = await r.json().catch(() => ({}));
+      if (!r.ok || String(res.success) === 'false') throw new Error(res.message || 'Request failed');
+      f.reset(); st.className = 'form-status ok';
+      st.textContent = '✦ Received. Thank you — I\'ll reply to ' + d.email + ' soon.';
+    } catch (err) {
+      st.className = 'form-status err';
+      st.innerHTML = 'Couldn\'t send just now (' + esc(err.message) + '). <a style="color:var(--ok)" href="' + mailFallback(d) + '">Send it by email instead →</a>';
+    } finally { btn.disabled = false; btn.textContent = 'Send scenario ✦'; }
+  });
+})();
+</script>
+</body>
+</html>

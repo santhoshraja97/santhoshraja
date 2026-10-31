@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Field Notes — Santhosh Raja</title>
+<meta name="description" content="Notes on Site Reliability Engineering, observability, incidents and AI in operations by Santhosh Raja." />
+
+<meta name="theme-color" content="#050505" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23050505'/><circle cx='16' cy='16' r='6' fill='%23d4af37'/></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/site.css" />
+
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="glow"></div>
+<nav id="nav">
+  <div class="wrap">
+    <a href="index.html#top" class="brand"><span class="pulse"></span><b>santhosh.raja</b> / sre</a>
+    <div class="navlinks">
+      <a href="index.html#about"><span>01</span> about</a>
+      <a href="index.html#experience"><span>02</span> experience</a>
+      <a href="index.html#stack"><span>03</span> stack</a>
+      <a href="blog.html" class="active"><span>04</span> blog</a>
+      <a href="index.html#contact"><span>05</span> contact</a>
+      <a href="consult.html" class="nav-cta">Consult ✦</a>
+    </div>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</nav>
+
+<header class="page-hero wrap">
+  <div class="eyebrow r">The Blog</div>
+  <h1 class="r">Field <em>notes.</em></h1>
+  <p class="lede r">Lessons from production: incidents, dashboards, SLOs, and bringing AI into the on-call rotation. New entries as they're written.</p>
+  <div class="toolbar r">
+    <div class="field search"><input id="q" type="search" placeholder="Search posts…" aria-label="Search posts"></div>
+  </div>
+  <div class="tagbar r" id="tags" style="margin-top:16px"></div>
+</header>
+<section style="padding-top:20px">
+  <div class="wrap"><div class="post-grid" id="list" style="margin-top:0"></div></div>
+</section>
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Santhosh Raja · <a href="index.html" style="color:var(--ok)">home</a> · <a href="blog.html" style="color:var(--ok)">blog</a> · <a href="consult.html" style="color:var(--ok)">consult</a></span>
+    <span><span data-visits style="color:var(--ok)">…</span> page loads · session uptime <span id="uptime" style="color:var(--ok)">0s</span></span>
+  </div>
+</footer>
+<script src="config.js"></script>
+<script src="assets/js/site.js"></script>
+<script>
+(() => {
+  let all = [], tag = null;
+  const list = document.getElementById('list'), q = document.getElementById('q'), tags = document.getElementById('tags');
+  function render(){
+    const term = q.value.trim().toLowerCase();
+    const shown = all.filter(p => (!tag || (p.tags||[]).includes(tag)) && (!term || (p.title + ' ' + (p.summary||'') + ' ' + (p.tags||[]).join(' ')).toLowerCase().includes(term)));
+    list.innerHTML = shown.length ? shown.map(postCard).join('') : '<div class="empty">No posts match that yet.</div>';
+    observeReveal(list);
+  }
+  fetch('posts/index.json', {cache:'no-store'}).then(r => r.json()).then(d => {
+    all = d;
+    const ts = [...new Set(d.flatMap(p => p.tags || []))].sort();
+    tags.innerHTML = '<button class="on" data-t="">All</button>' + ts.map(t => `<button data-t="${esc(t)}">${esc(t)}</button>`).join('');
+    tags.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; tag = b.dataset.t || null; tags.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); render(); });
+    render();
+  }).catch(() => { list.innerHTML = '<div class="empty">Posts couldn\'t be loaded. (Previewing from a file? Run a local server — see README.)</div>'; });
+  q.addEventListener('input', render);
+})();
+</script>
+</body>
+</html>

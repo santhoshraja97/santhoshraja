@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Field Notes — Santhosh Raja</title>
+<meta name="description" content="A post from Santhosh Raja's SRE field notes." />
+
+<meta name="theme-color" content="#050505" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23050505'/><circle cx='16' cy='16' r='6' fill='%23d4af37'/></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/site.css" />
+
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="glow"></div>
+<nav id="nav">
+  <div class="wrap">
+    <a href="index.html#top" class="brand"><span class="pulse"></span><b>santhosh.raja</b> / sre</a>
+    <div class="navlinks">
+      <a href="index.html#about"><span>01</span> about</a>
+      <a href="index.html#experience"><span>02</span> experience</a>
+      <a href="index.html#stack"><span>03</span> stack</a>
+      <a href="blog.html" class="active"><span>04</span> blog</a>
+      <a href="index.html#contact"><span>05</span> contact</a>
+      <a href="consult.html" class="nav-cta">Consult ✦</a>
+    </div>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</nav>
+
+<article class="page-hero wrap">
+  <div class="article">
+    <a class="eyebrow" href="blog.html">← Field notes</a>
+    <h1 id="title" style="font-size:clamp(44px,6.5vw,88px)">Loading…</h1>
+    <div class="article-meta" id="meta"></div>
+    <div class="prose" id="body"></div>
+    <div class="article-foot">
+      <a class="btn" href="blog.html">← All posts</a>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn" id="share" target="_blank" rel="noopener">Share on LinkedIn ↗</a>
+        <a class="btn primary" href="consult.html">Ask me about this ✦</a>
+      </div>
+    </div>
+  </div>
+</article>
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Santhosh Raja · <a href="index.html" style="color:var(--ok)">home</a> · <a href="blog.html" style="color:var(--ok)">blog</a> · <a href="consult.html" style="color:var(--ok)">consult</a></span>
+    <span><span data-visits style="color:var(--ok)">…</span> page loads · session uptime <span id="uptime" style="color:var(--ok)">0s</span></span>
+  </div>
+</footer>
+<script src="config.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+<script src="assets/js/posts.js"></script>
+<script>
+(() => {
+  const slug = new URLSearchParams(location.search).get('p') || '';
+  const T = document.getElementById('title'), M = document.getElementById('meta'), B = document.getElementById('body');
+  if (!/^[a-z0-9-]+$/i.test(slug)) { T.textContent = 'Post not found'; return; }
+  fetch('posts/' + slug + '.md', {cache:'no-store'}).then(r => { if (!r.ok) throw 0; return r.text(); }).then(src => {
+    const {meta, body} = parsePost(src);
+    document.title = meta.title + ' — Santhosh Raja';
+    T.textContent = meta.title || slug;
+    M.innerHTML = [fmtDate(meta.date), readingTime(body) + ' min read', ...(meta.tags||[]).map(t => '<span class="chip">' + esc(t) + '</span>')].map((x,i) => i<2 ? esc(x) : x).join('<span class="dot"></span>');
+    B.innerHTML = renderMarkdown(body);
+    document.getElementById('share').href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(location.href);
+  }).catch(() => { T.textContent = 'Post not found'; B.innerHTML = '<p>This post doesn\'t exist (yet). <a href="blog.html">Back to all posts</a>.</p>'; });
+})();
+</script>
+</body>
+</html>

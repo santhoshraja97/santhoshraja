@@ -1,684 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Santhosh raja</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Mar 17 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Santhosh Raja — Site Reliability Engineer</title>
+<meta name="description" content="Santhosh Raja — Certified SRE Implementation Expert, SRE AI specialist, Observability & Monitoring, AWS and Azure. Chennai, India." />
+<meta property="og:title" content="Santhosh Raja — Site Reliability Engineer" />
+<meta property="og:description" content="6.5+ years across DevOps, SRE, observability and cloud. Keeping production calm." />
+<meta name="theme-color" content="#050505" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2307090c'/><circle cx='16' cy='16' r='6' fill='%23d4af37'/></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/site.css" />
 </head>
-
 <body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="glow"></div>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/Profile.png" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Santhosh Raja</a></h1>
-        <div class="social-links mt-3 text-center">
-          <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
-          <a href="https://www.linkedin.com/in/raja-santhosh/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
-      </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <!-- <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> -->
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="index.html#top" class="brand"><span class="pulse"></span><b>santhosh.raja</b> / sre</a>
+    <div class="navlinks">
+      <a href="index.html#about"><span>01</span> about</a>
+      <a href="index.html#experience"><span>02</span> experience</a>
+      <a href="index.html#stack"><span>03</span> stack</a>
+      <a href="blog.html"><span>04</span> blog</a>
+      <a href="index.html#contact"><span>05</span> contact</a>
+      <a href="consult.html" class="nav-cta">Consult ✦</a>
     </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Santhosh Raja</h1>
-      <p><span class="typed" data-typed-items="Welcome to my World"></span></p>
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>About</h2>
-          <p>
-            I've spent years in R&D in software engineering, specializing in hybrid mobile app lifecycle management with Azure. I enjoy simplifying complex tech into business solutions, focusing on seamless user experiences and cloud innovation. Looking ahead, I aim to contribute to cutting-edge software projects and promote collaborative growth.</p>
-        </div>
-
-        <div class="row">
-          <!-- <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/Santhosh.png" class="img-fluid" alt="">
-          </div> -->
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Software Engineer</h3>
-            <p class="fst-italic">
-              Software Developer | Ionic & C# Developer | Building Cross-Platform Mobile Solutions | Azure Open AI Studio | Oracle Apex
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>02 Sep 1997</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.santhoshraja.in</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 97911 60865</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Chennai, Tamilnadu</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>26</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>santhoshrajavasanthi@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Experience:</strong> <span>4 years and 8 months</span></li>
-                </ul>
-              </div>
-            </div>
-            <!-- <p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-            </p> -->
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Facts Section ======= -->
-    <!-- <section id="facts" class="facts">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Facts</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-            <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Happy Clients</strong> consequuntur quae</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong> adipisci atque cum quia aut</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="count-box">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hard Workers</strong> rerum asperiores dolor</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
-    <!-- End Facts Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div> -->
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">HTML & CSS <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Ionic <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">JavaScript & Typescript <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill">Android Studio,APK, Store deployment <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">C# <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">MSSql & Oracle <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Photoshop <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill">Xcode,IOS Store deployment <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-           
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Skills Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>Santhosh Raja</h4>
-              <p><em>Innovative and deadline-driven Software Engineer with 4+ years of experience designing and developing user-centered mobile applications and RnD needed critical solutions for various senarios from initial concept to final, polished deliverable.</em></p>
-              <ul>
-                <li>Chennai , Tamilnadu</li>
-                <li>+91 9791160865</li>
-                <li>santhoshrajavasanthi@gmail.com</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <!-- <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-            </div> -->
-            <div class="resume-item">
-              <h4>Bachelor of Engineering &amp; Mechanical Engineering</h4>
-              <h5>2015 - 2019</h5>
-              <p><em>Dhanalakshmi College of Engineering, Affiliated to Anna University, chennai</em></p>
-              <p>Efficient and studios in learning new concepts and understanding the core essence of the technical details in and out of the subjects with made me to graduate with first class through my academics</p>
-              <p>Awarded the most prestigious recognition to the Project that i have done in the final year of my academics by SAE India </p>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Software Developer</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Sagitec Solutions, Taramani , Chennai</em></p>
-              <ul>
-                <li>Worked on Azure Open AI studio and AI services to make several POCs on TTS service and Open AI chat service</li>
-                <li>Worked on creating Docker images and deploying it to the servers for its purposes </li>
-                <li> Production deployment of Android and Apple products. Testflight deployment and maintenance of Lower region deployments</li>
-                <li>SSL cert handling in servers and server maintenance for middleware apps</li>
-                <li>ADA testing in Mobile app to make ADA Complaint </li>
-                <li>Designing and developing User friendly UI/UX designs with Adobe XD and converting that to Ionic Template</li>
-                <li>Contributing towards the development of a Low Code No Code platform "XELENCE" in the mobile aspect where mobile application creation is been automated</li>
-                <li>Providing a key role in fixing majority of the UI related bugs and creating many custom components to reduce the redundancy work of the team</li>
-              </ul>
-            </div>
-            <!-- <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
-            </div> -->
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <!-- <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>End Portfolio Section -->
-
-    <!-- ======= Services Section ======= -->
-    <!-- <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-card-checklist"></i></div>
-            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-bar-chart"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-binoculars"></i></div>
-            <h4 class="title"><a href="">Magni Dolores</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="bi bi-brightness-high"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-          </div>
-        </div>
-
-      </div>
-    </section> -->
-    <!-- End Services Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <!-- <section id="testimonials" class="testimonials section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div>-->
-            <!-- End testimonial item -->
-
-            <!-- <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div> -->
-            <!-- End testimonial item -->
-
-            <!-- <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div> -->
-            <!-- End testimonial item -->
-<!-- 
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div> -->
-            <!-- End testimonial item -->
-<!-- 
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div> -->
-            <!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section> -->
-    <!-- End Testimonials Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Please reach out to my linkedin for discussions</p>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Chennai , Tamilnadu</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>santhoshrajasandy97@gmail.com</p>
-              </div>
-
-              <!-- <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
-              </div> -->
-
-              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe> -->
-            </div>
-
-          </div>
-
-          <!-- <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div> -->
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <!-- <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
-      </div>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <div class="status-chip"><span class="pulse"></span>All systems operational · Chennai, India <span class="chip-sep"></span><span class="visits-inline"><span data-visits>…</span> page loads</span></div>
+  <h1>Santhosh <em>Raja</em></h1>
+  <div class="role"><span id="typed"></span><span class="caret"></span></div>
+
+  <div class="hero-grid">
+    <div>
+      <p class="lede">I keep production <strong>calm</strong>. 6.5+ years across development, DevOps and Site Reliability Engineering — building observability, taming incidents, and bringing <strong>AI into SRE operations</strong> for pharma, life science and banking clients.</p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Get in touch ↗</a>
+        <a class="btn" href="consult.html">Ask an SRE question</a>
+        <a class="btn" href="https://www.linkedin.com/in/raja-santhosh" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
-  </footer> -->
-  <!-- End  Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <div class="panel r" aria-hidden="true">
+      <div class="panel-head"><div class="dots"><i></i><i></i><i></i></div><span>prod / p99 latency</span><span id="clock">--:--:--</span></div>
+      <div class="slo">
+        <div><small>Availability</small><b class="g">99.98%</b></div>
+        <div><small>p99 latency</small><b id="p99">212ms</b></div>
+        <div><small>Page loads</small><b data-visits>…</b></div>
+      </div>
+      <canvas id="graph"></canvas>
+      <div class="log" id="log"></div>
+    </div>
+  </div>
+</header>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Site Reliability Engineering</span><span>Observability</span><span>Incident Management</span><span>AIOps</span><span>AWS</span><span>Azure</span><span>Toil Automation</span><span>Postmortems</span><span>CI/CD</span>
+    <span>Site Reliability Engineering</span><span>Observability</span><span>Incident Management</span><span>AIOps</span><span>AWS</span><span>Azure</span><span>Toil Automation</span><span>Postmortems</span><span>CI/CD</span>
+  </div>
+</div>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow r">01 — About</div>
+    <h2 class="r">From writing the code to <em>keeping it running.</em></h2>
+    <div class="about-grid">
+      <div class="r">
+        <p>I started on the development and debugging side — building UI, mobile apps and custom components for a low-code platform. That foundation shapes how I approach reliability today: I understand the code that breaks, not just the dashboards that report it.</p>
+        <p>From there I moved into cloud computing and the microservices world, and now lead hands-on SRE implementation — making sure every project lines up with industry-standard SRE practice, from SLOs and dashboards to severity management and blameless postmortems.</p>
+        <p>I've worked with top-tier clients in <strong style="color:var(--ink)">pharma, life science, banking and unemployment insurance</strong>, and I'm always looking for the next hard problem that makes a system more robust.</p>
+      </div>
+      <div class="stats r">
+        <div class="stat"><b><i data-count="6.5">0</i><sup>+</sup></b><span>years in DevOps &amp; SRE</span></div>
+        <div class="stat"><b><i data-count="4">0</i></b><span>industry domains</span></div>
+        <div class="stat"><b><i data-count="10">0</i><sup>+</sup></b><span>monitoring &amp; ops tools</span></div>
+        <div class="stat"><b><i data-count="2">0</i></b><span>clouds — AWS &amp; Azure</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section id="experience" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow r">02 — Experience</div>
+    <h2 class="r">Changelog <em>of a career.</em></h2>
+
+    <div class="xp">
+      <article class="job current r">
+        <div class="when"><span class="tag">● Current</span><br>Jun 2025 — Present<span class="dur">India</span></div>
+        <div>
+          <h3>LTIMindtree</h3>
+          <h4>Specialist — Product Engineering</h4>
+          <p class="ctx">SRE for a life science &amp; pharma client.</p>
+          <ul>
+            <li>Brought AI into SRE operations, measurably increasing operational efficiency.</li>
+            <li>Set up Site Reliability best practices across the client environment.</li>
+            <li>Owned incident and severity management; coordinated multiple teams through critical production incidents.</li>
+            <li>Built and organised dashboard metrics for a strong end-to-end observability layer.</li>
+            <li>Wrote postmortem analyses for critical production issues.</li>
+            <li>Reduced toil by automating recurring operations; worked deeply with AWS Lambda and EKS.</li>
+          </ul>
+          <div class="chips"><span class="chip">ITRS Uptrends</span><span class="chip">CloudWatch</span><span class="chip">Splunk</span><span class="chip">New Relic</span><span class="chip">ServiceNow</span><span class="chip">Rancher</span><span class="chip">PagerDuty</span><span class="chip">AIOps</span><span class="chip">EKS</span><span class="chip">Lambda</span></div>
+        </div>
+      </article>
+
+      <article class="job r">
+        <div class="when"><span class="tag">Sagitec Solutions</span><br>Jan 2024 — May 2025<span class="dur">Chennai · 1 yr 5 mo</span></div>
+        <div>
+          <h3>Sagitec Solutions</h3>
+          <h4>Software Developer</h4>
+          <ul>
+            <li>Designed and deployed Azure AI &amp; DevOps solutions, including a private GPT for automation.</li>
+            <li>Implemented monitoring with Prometheus, Grafana and Loki for server optimisation.</li>
+            <li>Built CI/CD pipelines in Azure DevOps for the low-code platform XELENCE.</li>
+            <li>Delivered end-to-end application development and managed multi-region deployments.</li>
+            <li>Handled production releases for Android and iOS, TestFlight and lower-region deployments.</li>
+            <li>Managed SSL certificates and server maintenance for middleware apps; drove ADA compliance testing for mobile.</li>
+          </ul>
+          <div class="chips"><span class="chip">Azure DevOps</span><span class="chip">Azure OpenAI</span><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">Loki</span><span class="chip">iOS / Android</span><span class="chip">TestFlight</span></div>
+        </div>
+      </article>
+
+      <article class="job r">
+        <div class="when"><span class="tag">Sagitec Solutions</span><br>Aug 2019 — Dec 2023<span class="dur">Chennai · 4 yr 5 mo</span></div>
+        <div>
+          <h3>Sagitec Solutions</h3>
+          <h4>Junior Software Developer</h4>
+          <ul>
+            <li>Designed user-friendly UI/UX in Adobe XD and turned it into Ionic templates.</li>
+            <li>Contributed to the mobile side of XELENCE, a low-code / no-code platform that automates mobile app creation.</li>
+            <li>Fixed a majority of UI bugs and built reusable custom components that cut redundant work for the team.</li>
+            <li>Created Docker images and deployed them to servers.</li>
+          </ul>
+          <div class="chips"><span class="chip">Ionic</span><span class="chip">Adobe XD</span><span class="chip">Docker</span><span class="chip">UI/UX</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="stack" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow r">03 — Stack &amp; Practice</div>
+    <h2 class="r">The tools I reach for <em>at 3 a.m.</em></h2>
+
+    <div class="stack-grid">
+      <div class="card r"><span class="ic">[ observe ]</span><h3>Observability</h3><ul><li>Splunk</li><li>New Relic</li><li>CloudWatch</li><li>Prometheus</li><li>Grafana · Loki</li><li>ITRS Uptrends</li></ul></div>
+      <div class="card r"><span class="ic">[ respond ]</span><h3>Incident Ops</h3><ul><li>PagerDuty</li><li>ServiceNow</li><li>Severity mgmt</li><li>Postmortems</li><li>SRE AIOps</li></ul></div>
+      <div class="card r"><span class="ic">[ run ]</span><h3>Cloud &amp; Platform</h3><ul><li>AWS · EKS · Lambda</li><li>Azure</li><li>Rancher</li><li>Docker</li><li>Multi-region deploys</li></ul></div>
+      <div class="card r"><span class="ic">[ ship ]</span><h3>Delivery</h3><ul><li>Azure DevOps CI/CD</li><li>Azure OpenAI</li><li>iOS / Android releases</li><li>Ionic · Vue.js</li><li>Jira</li></ul></div>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar r"><span class="n">/01</span><h3>Measure what matters</h3><p>Dashboards and SLOs that tell you something is wrong before your users do.</p></div>
+      <div class="pillar r"><span class="n">/02</span><h3>Kill the toil</h3><p>If a human does it twice, it's a candidate for automation — and increasingly, for AI.</p></div>
+      <div class="pillar r"><span class="n">/03</span><h3>Learn from every outage</h3><p>Blameless postmortems that turn incidents into lasting fixes, not just tickets.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="credentials" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow r">04 — Credentials</div>
+    <h2 class="r">Certified &amp; <em>always learning.</em></h2>
+    <div class="two">
+      <div class="list-panel r">
+        <h3>Certifications</h3>
+        <div class="cert">SRE Practitioner<span>SRE</span></div>
+        <div class="cert">AI Show: Azure OpenAI Solutions with TTS Avatar<span>AI</span></div>
+        <div class="cert">Learning Vue.js<span>FRONTEND</span></div>
+        <div class="cert">Getting Things Done<span>PRODUCTIVITY</span></div>
+        <div class="cert">Four Simple Strategies to Boost Creativity and Productivity<span>PRODUCTIVITY</span></div>
+      </div>
+      <div class="list-panel edu r">
+        <h3>Education</h3>
+        <b>Dhanalakshmi College of Engineering</b>
+        <p>Bachelor's degree, Mechanical Engineering</p>
+        <span class="yr">2015 — 2019</span>
+        <p class="note">An engineer by training who chose software — and then chose to make it reliable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="writing" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow r">05 — Field Notes</div>
+    <div class="section-head">
+      <h2 class="r">From the <em>reliability journal.</em></h2>
+      <a class="btn r" href="blog.html">All posts →</a>
+    </div>
+    <div class="post-grid" id="latest-posts"></div>
+  </div>
+</section>
+
+<section class="consult-band">
+  <div class="wrap">
+    <div class="band r">
+      <div>
+        <div class="eyebrow">Consulting</div>
+        <h2>Stuck on an <em>SRE problem?</em></h2>
+        <p>Noisy alerts, unclear SLOs, a postmortem that went nowhere, or bringing AI into incident response: send me the scenario and I'll get back to you.</p>
+      </div>
+      <a class="btn primary" href="consult.html">Bring me your scenario ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="ornament r" aria-hidden="true">✦ ✦ ✦</div><br><br>
+    <div class="eyebrow r" style="justify-content:center">06 — Contact</div>
+    <h2 class="r">Let's make your systems <em>boring.</em></h2>
+    <p class="r">Open to SRE, observability and reliability engineering roles and collaborations.</p>
+    <a class="mail r" href="mailto:santhoshrajavasanthi@gmail.com">santhoshrajavasanthi@gmail.com</a>
+    <div class="socials r">
+      <a class="btn" href="https://www.linkedin.com/in/raja-santhosh" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="mailto:santhoshrajavasanthi@gmail.com">Email ↗</a>
+      <a class="btn primary" href="consult.html">Consulting request ✦</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Santhosh Raja</span>
+    <span><span data-visits style="color:var(--ok)">…</span> page loads · session uptime <span id="uptime" style="color:var(--ok)">0s</span></span>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="assets/js/site.js"></script>
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // typed role
+  const roles = ['Certified SRE Implementation Expert','SRE AI Specialist','Observability & Monitoring','AWS · Azure'];
+  const el = document.getElementById('typed');
+  let ri = 0, ci = 0, del = false;
+  (function type(){
+    const w = roles[ri];
+    el.textContent = '$ ' + w.slice(0, ci);
+    if (!del && ci === w.length) { del = true; return setTimeout(type, 1800); }
+    if (del && ci === 0) { del = false; ri = (ri + 1) % roles.length; }
+    ci += del ? -1 : 1;
+    setTimeout(type, del ? 28 : 55);
+  })();
+
+  // counters
+  const cio = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const b = e.target, to = parseFloat(b.dataset.count), dec = to % 1 ? 1 : 0, t0 = performance.now();
+    (function tick(t){
+      const p = Math.min(1, (t - t0) / 1400), v = to * (1 - Math.pow(1 - p, 3));
+      b.textContent = v.toFixed(dec);
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+    cio.unobserve(b);
+  }), {threshold: .6});
+  document.querySelectorAll('[data-count]').forEach(b => cio.observe(b));
+
+  // latest posts
+  fetch('posts/index.json').then(r => r.json()).then(list => {
+    const box = document.getElementById('latest-posts');
+    box.innerHTML = list.slice(0,3).map(window.postCard).join('') || '<p class="muted">First post coming soon.</p>';
+    observeReveal(box);
+  }).catch(() => { document.getElementById('writing').style.display = 'none'; });
+
+  // live clock
+  const clock = document.getElementById('clock');
+  setInterval(() => { clock.textContent = new Date().toLocaleTimeString('en-GB', {timeZone:'Asia/Kolkata'}) + ' IST'; }, 1000);
+
+  // latency graph
+  const cv = document.getElementById('graph'), ctx = cv.getContext('2d'), p99 = document.getElementById('p99');
+  let pts = Array.from({length: 80}, () => 200 + Math.random() * 30), W, H;
+  function size(){ const d = devicePixelRatio || 1; W = cv.clientWidth; H = cv.clientHeight; cv.width = W*d; cv.height = H*d; ctx.setTransform(d,0,0,d,0,0); }
+  size(); addEventListener('resize', size);
+  let spike = 0;
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    ctx.strokeStyle = 'rgba(58,50,34,.5)'; ctx.lineWidth = 1;
+    for (let y = 30; y < H; y += 30) { ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke(); }
+    // SLO line
+    const sloY = H - (320 - 120) / 260 * H;
+    ctx.setLineDash([4,4]); ctx.strokeStyle = 'rgba(247,243,234,.35)';
+    ctx.beginPath(); ctx.moveTo(0,sloY); ctx.lineTo(W,sloY); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = 'rgba(247,243,234,.55)'; ctx.font = '10px JetBrains Mono, monospace'; ctx.fillText('SLO 320ms', W - 70, sloY - 5);
+    const step = W / (pts.length - 1), Y = v => H - (v - 120) / 260 * H;
+    const g = ctx.createLinearGradient(0,0,0,H); g.addColorStop(0,'rgba(212,175,55,.28)'); g.addColorStop(1,'rgba(212,175,55,0)');
+    ctx.beginPath(); ctx.moveTo(0, Y(pts[0]));
+    pts.forEach((v,i) => ctx.lineTo(i*step, Y(v)));
+    ctx.lineTo(W,H); ctx.lineTo(0,H); ctx.fillStyle = g; ctx.fill();
+    ctx.beginPath(); pts.forEach((v,i) => i ? ctx.lineTo(i*step, Y(v)) : ctx.moveTo(0, Y(v)));
+    ctx.strokeStyle = '#d4af37'; ctx.lineWidth = 1.6; ctx.stroke();
+    const lx = W, ly = Y(pts[pts.length-1]);
+    ctx.beginPath(); ctx.arc(lx-2, ly, 3.5, 0, 7); ctx.fillStyle = '#d4af37'; ctx.fill();
+  }
+  draw();
+  if (!reduce) setInterval(() => {
+    const last = pts[pts.length-1];
+    let v = last + (Math.random() - .5) * 18 + (210 - last) * .08;
+    if (spike > 0) { v += 70 * Math.sin(spike / 6 * Math.PI); spike--; }
+    pts.push(Math.max(140, Math.min(370, v))); pts.shift();
+    p99.textContent = Math.round(pts[pts.length-1]) + 'ms';
+    draw();
+  }, 260);
+
+  // log stream
+  const log = document.getElementById('log');
+  const lines = [
+    ['ok','INFO','health-check passed · eks/prod-api'],
+    ['i','INFO','autoscaler: +2 pods (cpu 71%)'],
+    ['ok','INFO','synthetic check · uptrends · 200 OK'],
+    ['w','WARN','p99 latency climbing · checkout-svc'],
+    ['i','AIOPS','anomaly correlated → runbook #42 triggered'],
+    ['ok','INFO','auto-remediation complete · latency nominal'],
+    ['ok','INFO','lambda cold-starts within budget'],
+    ['i','INFO','postmortem PM-118 published'],
+    ['ok','INFO','error budget burn rate 0.4x'],
+  ];
+  let li = 0;
+  function addLine(){
+    const [c, lvl, msg] = lines[li++ % lines.length];
+    if (lvl === 'WARN') spike = 6;
+    const t = new Date().toLocaleTimeString('en-GB', {timeZone:'Asia/Kolkata'});
+    const p = document.createElement('p');
+    p.innerHTML = `<span class="t">${t}</span> <span class="${c}">${lvl.padEnd(5,' ')}</span> ${msg}`;
+    log.appendChild(p);
+    while (log.children.length > 4) log.removeChild(log.firstChild);
+  }
+  for (let i = 0; i < 3; i++) addLine();
+  if (!reduce) setInterval(addLine, 2200);
+})();
+</script>
 </body>
-
 </html>
