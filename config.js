@@ -4,8 +4,8 @@
 window.SITE_CONFIG = {
   // Your GitHub username and the repo this site lives in.
   // Used by the blog composer (write.html) to open GitHub's "new file" page.
-  githubUser: "YOUR-GITHUB-USERNAME",
-  githubRepo: "YOUR-REPO-NAME",
+  githubUser: "santhoshraja97",
+  githubRepo: "santhoshraja",
   githubBranch: "main",
 
   // Consulting form submissions are emailed here (via formsubmit.co).

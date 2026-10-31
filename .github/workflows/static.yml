@@ -1,4 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Builds the blog index and deploys the site to GitHub Pages
 name: Deploy static content to Pages
 
 on:
@@ -29,15 +29,28 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      # Actions are pinned to commit SHAs so a moved tag can't change what runs here
       - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          # Upload entire repository
-          path: '.'
+          persist-credentials: false
+      - name: Setup Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+      - name: Build blog index
+        run: node scripts/build-posts.mjs
+      - name: Assemble site
+        # Publish an explicit list of files, so repo-only files and draft posts stay off the site
+        run: |
+          mkdir -p _site/posts
+          cp *.html config.js CNAME .nojekyll _site/
+          mkdir -p _site/assets
+          cp -r assets/css assets/js assets/vendor _site/assets/
+          cp posts/index.json _site/posts/
+          jq -r '.[].slug' posts/index.json | while read -r slug; do cp "posts/$slug.md" _site/posts/; done
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
+        with:
+          path: _site
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

@@ -17,6 +17,7 @@ window.parsePost = function (src) {
 };
 window.readingTime = body => Math.max(1, Math.round((body.trim().split(/\s+/).length || 0) / 220));
 window.renderMarkdown = function (md) {
-  const html = window.marked ? marked.parse(md, { gfm: true, breaks: false }) : '<pre>' + esc(md) + '</pre>';
-  return window.DOMPurify ? DOMPurify.sanitize(html) : html;
+  // Never inject unsanitised HTML: without both libraries, show the source as text.
+  if (!window.marked || !window.DOMPurify) return '<pre>' + esc(md) + '</pre>';
+  return DOMPurify.sanitize(marked.parse(md, { gfm: true, breaks: false }));
 };

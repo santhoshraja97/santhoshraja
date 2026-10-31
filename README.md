@@ -11,10 +11,12 @@ post.html         Single post page (post.html?p=<slug>)
 write.html        Private blog composer (not linked in the menu)
 config.js         ← the only file you need to edit
 posts/            Your blog posts, one Markdown file each
-assets/           Shared CSS and JS
+assets/           Shared CSS and JS, plus marked and DOMPurify in assets/vendor
 scripts/          Builds posts/index.json from posts/*.md
 .github/workflows Auto-deploy to GitHub Pages on every push
 ```
+
+Only the files listed in the workflow's **Assemble site** step are published. If you add a new top-level folder for the site, add it there too. `assets/img` isn't published either, so add it to that step if a page starts using an image from it.
 
 ---
 
@@ -23,7 +25,6 @@ scripts/          Builds posts/index.json from posts/*.md
 1. **Edit `config.js`** and set `githubUser` and `githubRepo` to your GitHub username and repo name.
 2. **Push to GitHub:**
    ```bash
-   cd site
    git init
    git add .
    git commit -m "Portfolio site"
@@ -80,7 +81,7 @@ Your post in **Markdown**. Use ## headings, lists, > quotes, tables, `code` and 
 Commit and push, or use **Add file → Create new file** inside the `posts` folder on github.com.
 
 - The file name becomes the URL: `post.html?p=my-post-name`. Use lowercase letters, numbers and dashes only.
-- Add `draft: true` to the header to hide a post.
+- Add `draft: true` to the header to keep a post off the site. It's still readable in the repo if the repo is public.
 - Posts are sorted newest first. The home page shows the latest three.
 - Delete a post by deleting its `.md` file.
 
@@ -91,10 +92,15 @@ Commit and push, or use **Add file → Create new file** inside the `posts` fold
 Pages load posts with `fetch`, so open the site through a tiny local server instead of double-clicking the file:
 
 ```bash
-cd site
 node scripts/build-posts.mjs     # refresh the post list
 python3 -m http.server 8000      # then open http://localhost:8000
 ```
+
+## Security
+
+- Every page has a Content Security Policy in a `<meta>` tag, so scripts can only load from this site. Keep JavaScript in `assets/js/`: inline `<script>` blocks are blocked.
+- If you add a new external service, add its domain to `connect-src` in the policy on all five pages.
+- Never put a key or token in `config.js` or any other site file. Everything here is public.
 
 ## Customising
 - Colours are CSS variables at the top of `assets/css/site.css`. `--ok` is the gold accent.

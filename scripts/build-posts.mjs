@@ -1,5 +1,5 @@
 // Builds posts/index.json from the Markdown files in posts/.
-// Runs automatically on every push (see .github/workflows/deploy.yml).
+// Runs automatically on every push (see .github/workflows/static.yml).
 // Run it yourself with:  node scripts/build-posts.mjs
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

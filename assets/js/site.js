@@ -21,7 +21,7 @@ window.postCard = p => `
     let W, H, nodes = [], edges = [], packets = [], t = 0;
     const labels = ['api-gw','auth','orders','payments','eks','lambda','splunk','cloudwatch','pagerduty','redis','rds','queue','cdn','search'];
     function build(){
-      const d = devicePixelRatio || 1; W = innerWidth; H = innerHeight;
+      const d = Math.min(devicePixelRatio || 1, 2); W = innerWidth; H = innerHeight;
       c.width = W*d; c.height = H*d; x.setTransform(d,0,0,d,0,0);
       const n = W < 700 ? 9 : 14; nodes = [];
       for (let i = 0; i < n; i++) nodes.push({x: Math.random()*W, y: Math.random()*H, vx:(Math.random()-.5)*.12, vy:(Math.random()-.5)*.12, r: 2+Math.random()*2.5, label: labels[i%labels.length], ph: Math.random()*6});
@@ -31,7 +31,8 @@ window.postCard = p => `
           .forEach(o => { if (!edges.some(e=>(e[0]===o.j&&e[1]===i))) edges.push([i,o.j]); });
       });
     }
-    build(); addEventListener('resize', build);
+    // Mobile address bars fire height-only resizes while scrolling; don't rebuild for those.
+    build(); addEventListener('resize', () => { if (innerWidth !== W) build(); });
     function frame(){
       t += 1; x.clearRect(0,0,W,H);
       // metric waves
