@@ -1,0 +1,25 @@
+[
+  {
+    "slug": "welcome-to-field-notes",
+    "title": "Welcome to Field Notes",
+    "date": "2026-10-31",
+    "tags": [
+      "SRE",
+      "Journal"
+    ],
+    "summary": "Why I'm writing down what production teaches me, and what you can expect here.",
+    "readingTime": 1
+  },
+  {
+    "slug": "error-budgets-in-plain-words",
+    "title": "Error Budgets in Plain Words",
+    "date": "2026-10-30",
+    "tags": [
+      "SLOs",
+      "Error Budgets",
+      "SRE"
+    ],
+    "summary": "An error budget isn't a penalty. It's permission to move fast, with a limit.",
+    "readingTime": 1
+  }
+]
