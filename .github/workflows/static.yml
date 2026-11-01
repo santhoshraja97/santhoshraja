@@ -44,7 +44,7 @@ jobs:
           mkdir -p _site/posts
           cp *.html config.js CNAME .nojekyll _site/
           mkdir -p _site/assets
-          cp -r assets/css assets/js assets/vendor _site/assets/
+          cp -r assets/css assets/js assets/vendor assets/img _site/assets/
           cp posts/index.json _site/posts/
           jq -r '.[].slug' posts/index.json | while read -r slug; do cp "posts/$slug.md" _site/posts/; done
       - name: Upload artifact

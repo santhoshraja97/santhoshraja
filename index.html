@@ -27,8 +27,9 @@
       <a href="index.html#about"><span>01</span> about</a>
       <a href="index.html#experience"><span>02</span> experience</a>
       <a href="index.html#stack"><span>03</span> stack</a>
-      <a href="blog.html"><span>04</span> blog</a>
-      <a href="index.html#contact"><span>05</span> contact</a>
+      <a href="index.html#projects"><span>04</span> projects</a>
+      <a href="blog.html"><span>05</span> blog</a>
+      <a href="index.html#contact"><span>06</span> contact</a>
       <a href="consult.html" class="nav-cta">Consult ✦</a>
     </div>
     <button class="menu-btn" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
@@ -169,9 +170,40 @@
   </div>
 </section>
 
+<section id="projects" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow r">04 — My Projects</div>
+    <h2 class="r">Built at home, <em>run like production.</em></h2>
+
+    <div class="xp">
+      <article class="job project r">
+        <div class="when"><span class="tag">Personal project</span><br>Self-hosted AI<span class="dur">Windows laptop · home network</span></div>
+        <div>
+          <h3>BeardoAI</h3>
+          <h4>Private AI chat with voice and full observability</h4>
+          <p class="ctx">A self-hosted assistant shared over home Wi-Fi. Only the chat is exposed; everything else stays on the laptop.</p>
+          <ul>
+            <li>Runs Open WebUI with a custom BeardoAI theme, user accounts and admin approval.</li>
+            <li>Serves local models on CPU through Ollama: a beardoai persona on qwen3:8b, plus qwen2.5-coder:7b.</li>
+            <li>Adds voice with Whisper speech-to-text and Kokoro text-to-speech, including a spoken welcome and spoken replies in calls.</li>
+            <li>Routes AI traffic through a metrics proxy that tracks tokens per person and model, speed and top prompts.</li>
+            <li>Monitors the host and the AI service with Prometheus, windows_exporter and a BeardoAI Grafana dashboard, keeping 30 days of metrics.</li>
+            <li>Binds every port to 127.0.0.1 except the chat on :8080, which the firewall limits to the home network.</li>
+          </ul>
+          <div class="chips"><span class="chip">Open WebUI</span><span class="chip">Ollama</span><span class="chip">Whisper</span><span class="chip">Kokoro TTS</span><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">windows_exporter</span></div>
+        </div>
+        <figure class="project-diagram">
+          <a href="assets/img/beardoai-architecture.png" target="_blank" rel="noopener"><img src="assets/img/beardoai-architecture.png" width="1344" height="932" loading="lazy" alt="BeardoAI architecture on a Windows laptop. Home Wi-Fi devices reach Open WebUI on port 8080, which uses Kokoro voice on 8880 and sends chats to a metrics service on 11435 that proxies Ollama on 11434. A monitoring add-on runs Prometheus on 9090, windows_exporter on 9182 and Grafana on 3000." /></a>
+          <figcaption>Architecture diagram · select to open full size</figcaption>
+        </figure>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section id="credentials" style="padding-top:40px">
   <div class="wrap">
-    <div class="eyebrow r">04 — Credentials</div>
+    <div class="eyebrow r">05 — Credentials</div>
     <h2 class="r">Certified &amp; <em>always learning.</em></h2>
     <div class="two">
       <div class="list-panel r">
@@ -195,7 +227,7 @@
 
 <section id="writing" style="padding-top:40px">
   <div class="wrap">
-    <div class="eyebrow r">05 — Field Notes</div>
+    <div class="eyebrow r">06 — Field Notes</div>
     <div class="section-head">
       <h2 class="r">From the <em>reliability journal.</em></h2>
       <a class="btn r" href="blog.html">All posts →</a>
@@ -220,7 +252,7 @@
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="ornament r" aria-hidden="true">✦ ✦ ✦</div><br><br>
-    <div class="eyebrow r" style="justify-content:center">06 — Contact</div>
+    <div class="eyebrow r" style="justify-content:center">07 — Contact</div>
     <h2 class="r">Let's make your systems <em>boring.</em></h2>
     <p class="r">Open to SRE, observability and reliability engineering roles and collaborations.</p>
     <a class="mail r" href="mailto:santhoshrajavasanthi@gmail.com">santhoshrajavasanthi@gmail.com</a>

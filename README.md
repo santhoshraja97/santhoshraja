@@ -16,7 +16,7 @@ scripts/          Builds posts/index.json from posts/*.md
 .github/workflows Auto-deploy to GitHub Pages on every push
 ```
 
-Only the files listed in the workflow's **Assemble site** step are published. If you add a new top-level folder for the site, add it there too. `assets/img` isn't published either, so add it to that step if a page starts using an image from it.
+Only the files listed in the workflow's **Assemble site** step are published. If you add a new top-level folder for the site, add it there too. Everything in `assets/img` is published, so keep only images meant for the site there.
 
 ---
 
